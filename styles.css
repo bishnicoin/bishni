@@ -11,8 +11,9 @@ header {
 }
 
 .header-image {
-    width: 400px; /* Make the header image responsive */
-    height: 400px; /* Maintain aspect ratio */
+    width: 100%; /* Make the header image responsive */
+    max-width: 400px; /* Restrict maximum width */
+    height: auto; /* Maintain aspect ratio */
 }
 
 main {
@@ -38,13 +39,13 @@ h2 {
 }
 
 .image-container {
-    display: flex;
-    justify-content: center; /* Center the images */
+    display: grid; /* Use grid instead of flex for better responsiveness */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Automatically adjust columns */
     gap: 20px; /* Space between images */
 }
 
 .gallery-image {
-    width: 150px; /* Set width of images */
+    width: 100%; /* Make images responsive */
     height: auto; /* Maintain aspect ratio */
 }
 
@@ -91,6 +92,10 @@ footer {
     h2 {
         font-size: 1.5em;
     }
+
+    .image-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
 }
 
 @media (max-width: 576px) {
@@ -98,7 +103,11 @@ footer {
         font-size: 1.3em;
     }
 
+    .image-container {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+
     .gallery-image {
-        width: 100px; /* Adjust image size for smaller screens */
+        width: 100%; /* Adjust image size to fit the container */
     }
 }
