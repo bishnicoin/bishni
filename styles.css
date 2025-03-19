@@ -1,0 +1,104 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+}
+
+.header-image {
+    width: 400px; /* Make the header image responsive */
+    height: 400px; /* Maintain aspect ratio */
+}
+
+main {
+    padding: 20px;
+}
+
+.about, .join, .image-gallery {
+    background-color: #fff;
+    border: 2px dashed #ff4500;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center align the text */
+}
+
+h2 {
+    color: #ff4500;
+}
+
+.image-gallery {
+    padding: 30px; /* Increase padding for the image gallery */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Center the images */
+    gap: 20px; /* Space between images */
+}
+
+.gallery-image {
+    width: 150px; /* Set width of images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.copy-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px; /* Space between address and icon */
+}
+
+.copy-button svg {
+    width: 24px; /* Set width of the SVG */
+    height: 24px; /* Set height of the SVG */
+    fill: #ff4500; /* Set color of the SVG */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffcc00;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 992px) {
+    main {
+        padding: 15px;
+    }
+
+    .about, .join, .image-gallery {
+        margin: 15px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 576px) {
+    h2 {
+        font-size: 1.3em;
+    }
+
+    .gallery-image {
+        width: 100px; /* Adjust image size for smaller screens */
+    }
+}
