@@ -34,14 +34,13 @@ h2 {
     color: #ff4500;
 }
 
-.image-gallery {
-    padding: 30px; /* Increase padding for the image gallery */
-}
+
 
 .image-container {
     display: grid; /* Use grid instead of flex for better responsiveness */
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Automatically adjust columns */
     gap: 20px; /* Space between images */
+    align-items: center;
 }
 
 .gallery-image {
@@ -100,7 +99,106 @@ footer {
 
 @media (max-width: 576px) {
     h2 {
-        font-size: 1.3em;
+        font-size: 1.3em;/* General Styles */
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centers everything inside body */
+        }
+        
+        /* Header */
+        header {
+            text-align: center;
+        }
+        
+        .header-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+        
+        /* Main Content */
+        main {
+            padding: 20px;
+        }
+        
+        /* Section Styles */
+        .about, .join, .image-gallery {
+            background-color: #fff;
+            border: 2px dashed #ff4500;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto; /* Centers the section */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px; /* Restricts width for better design */
+        }
+        
+        /* Headings */
+        h2 {
+            color: #ff4500;
+        }
+        
+        /* Image Gallery */
+        .image-container {
+            display: flex;
+            justify-content: center; /* Centers images horizontally */
+            flex-wrap: wrap; /* Allows wrapping for small screens */
+            gap: 20px;
+            padding: 10px;
+        }
+        
+        .gallery-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Makes images circular */
+            object-fit: cover; /* Ensures images fit properly */
+        }
+        
+        /* Copy Button */
+        .copy-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        
+        .copy-button svg {
+            width: 24px;
+            height: 24px;
+            fill: #ff4500;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ffcc00;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 1.5em;
+            }
+        
+            .image-container {
+                flex-direction: column; /* Stack images on small screens */
+                align-items: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            h2 {
+                font-size: 1.3em;
+            }
+        }
+        
     }
 
     .image-container {
@@ -109,5 +207,6 @@ footer {
 
     .gallery-image {
         width: 100%; /* Adjust image size to fit the container */
+        
     }
 }
